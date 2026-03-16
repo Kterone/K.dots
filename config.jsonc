@@ -1,0 +1,80 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 20,
+  "spacing": 4,
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "tray"
+  ],
+  
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "󰈹",
+      "2": "󰉋",
+      "3": "󰈬",
+      "4": "󰇮",
+      "5": "󰎤",
+      "active": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+  
+  "clock": {
+    "format": " {:%H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+  },
+  
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈀 {bandwidthTotalBytes}",
+    "format-disconnected": "󰖪 Offline",
+    "interval": 5
+  },
+  
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁 Muted",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "scroll-step": 5
+  },
+  
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 5
+  },
+  
+  "memory": {
+    "format": "󰍛 {percentage}%",
+    "interval": 5
+  },
+  
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
+    "interval": 1
+  },
+  
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  }
+}
